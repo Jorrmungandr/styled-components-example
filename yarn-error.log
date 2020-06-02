@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/jorrmungandr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jorrmungandr/Android/Sdk/emulator:/home/jorrmungandr/Android/Sdk/tools:/home/jorrmungandr/Android/Sdk/tools/bin:/home/jorrmungandr/Android/Sdk/platform-tools:/home/jorrmungandr/Android/Sdk/tools:/home/jorrmungandr/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  13.8.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/jorrmungandr/Documents/Coding/js/react/styled-components-example/package.json: Unexpected token / in JSON at position 471
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "styled-components-example",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Jorrmungandr/styled-components-example.git",
+    "author": "Edgar Marques <edgarmarques.110@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build"
+    },
+    "dependencies": {
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-scripts": "^3.4.1"
+    },
+    "devDependencies": {
+      // "eslint": "^7.1.0",
+      // "eslint-config-airbnb": "^18.1.0",
+      // "eslint-plugin-import": "^2.20.2",
+      // "eslint-plugin-jsx-a11y": "^6.2.3",
+      // "eslint-plugin-react": "^7.20.0",
+      // "eslint-plugin-react-hooks": "^4.0.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
