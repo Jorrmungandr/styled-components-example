@@ -12,7 +12,7 @@ const ModalBase = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: ${Colors.mainBlack};
+  background-color: rgba(0, 0, 0, 0.2);
 `;
 
 const ModalContent = styled.form`
@@ -31,7 +31,7 @@ const FormInput = styled.input`
   padding: .6rem;
   width: 100%;
 
-  background-color: ${Colors.background};
+  background-color: ${Colors.secondaryWhite};
 
   border-style: none;
   border-bottom-style: solid;
@@ -68,8 +68,10 @@ const colourStyles = {
   control: (base) => ({
     ...base,
     boxShadow: 'none',
-    border: `1px solid ${Colors.mainBlack}`,
+    // border: `1px solid ${Colors.mainBlack}`,
     cursor: 'pointer',
+    borderRadius: '0rem',
+    backgroundColor: Colors.secondaryWhite,
     margin: '1.3rem 0',
     '&:hover': {
       border: `1px solid ${Colors.mainBlack}`,

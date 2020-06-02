@@ -5,6 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   ${flex('center', 'center', 'column')}
+  background-color: ${Colors.mainWhite};
 `;
 
 const Button = styled.button`

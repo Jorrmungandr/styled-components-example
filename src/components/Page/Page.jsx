@@ -18,6 +18,10 @@ function Page() {
   const [price, setPrice] = useState('');
   const [option, setOption] = useState({});
 
+  const handleSubmit = () => {
+    console.log(name, price, option);
+  };
+
   return (
     <Container>
       <TitleContainer>
@@ -27,17 +31,18 @@ function Page() {
       <Button onClick={() => setShowModal(true)}>
         Open Modal
       </Button>
-      <Modal active={showModal} setActive={setShowModal}>
+      <Modal handleSubmit={handleSubmit} active={showModal} setActive={setShowModal}>
         <Modal.Title>Criar Item</Modal.Title>
         <Modal.Input value={name} setValue={setName} placeholder="Nome do Item" />
         <Modal.Input value={price} setValue={setPrice} placeholder="Preço" />
         <Modal.Select
           value={option}
           setValue={setOption}
+          placeholder="Opção de Pagamento"
           options={[
-            { label: 'Opção 1', value: 'aaa' },
-            { label: 'Opção 1', value: 'aaa' },
-            { label: 'Opção 1', value: 'aaa' },
+            { label: 'Cartão', value: 'aaa' },
+            { label: 'Depósito', value: 'aaa' },
+            { label: 'Boleto', value: 'aaa' },
           ]}
         />
         <Modal.Button>Criar</Modal.Button>
