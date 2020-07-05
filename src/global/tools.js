@@ -1,3 +1,5 @@
+import styled, { css } from 'styled-components';
+
 const Colors = {
   mainBlue: '#2B65F9',
   mainBlack: '#333333',
@@ -6,13 +8,13 @@ const Colors = {
   mainWhite: '#FFF',
 };
 
-const flexcc = `
+const flexcc = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const flex = (justify, align, direction, wrap) => `
+const flex = (justify = 'unset', align = 'unset', direction = 'unset', wrap = 'unset') => `
   display: flex;
   justify-content: ${justify};
   align-items: ${align};
@@ -20,8 +22,17 @@ const flex = (justify, align, direction, wrap) => `
   flex-wrap: ${wrap};
 `;
 
+const FlexComponent = styled.div`
+  display: flex;
+  justify-content: ${({ justify }) => justify || 'unset'};
+  align-items: ${({ align }) => align || 'unset'};
+  flex-direction: ${({ direction }) => direction || 'unset'};
+  flex-wrap: ${({ wrap }) => wrap || 'unset'};
+`;
+
 export {
   Colors,
   flex,
   flexcc,
+  FlexComponent,
 };

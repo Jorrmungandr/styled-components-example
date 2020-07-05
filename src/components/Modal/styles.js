@@ -22,7 +22,7 @@ const ModalContent = styled.form`
   max-height: 40rem;
   margin: auto;
   padding: 0 2.6rem 2.6rem;
-  background-color: ${Colors.mainWhite};
+  background-color: ${({ theme }) => theme.colors.mainWhite};
   overflow: auto;
   text-align: center;
 `;
@@ -31,36 +31,36 @@ const FormInput = styled.input`
   padding: .6rem;
   width: 100%;
 
-  background-color: ${Colors.secondaryWhite};
+  background-color: ${({ theme }) => theme.colors.secondaryWhite};
 
   border-style: none;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: ${Colors.secondaryBlue};
+  border-bottom-color: ${({ theme }) => theme.colors.secondaryBlue};
 
   outline-style: none;
 
-  color: ${Colors.secondaryBlue};
+  color: ${({ theme }) => theme.colors.secondaryBlue};
 
   margin: .6rem 0;
 
   &::placeholder {
-    color: ${Colors.secondaryBlue};
+    color: ${({ theme }) => theme.colors.secondaryBlue};
   }
 `;
 
 const FormButton = styled.button`
   width: 100%;
   outline: none;
-  background-color: ${Colors.mainBlue};
-  border: 1px solid ${Colors.mainWhite};
+  background-color: ${({ theme }) => theme.colors.mainBlue};
+  border: 1px solid ${({ theme }) => theme.colors.mainWhite};
   padding: .5rem 0;
-  color: ${Colors.mainWhite};
+  color: ${({ theme }) => theme.colors.mainWhite};
   margin-top: 2.6rem;
 `;
 
 const Title = styled.h2`
-  color: ${Colors.mainBlack};
+  color: ${({ theme }) => theme.colors.mainBlack};
   margin: 20px 0;
 `;
 
@@ -68,13 +68,13 @@ const colourStyles = {
   control: (base) => ({
     ...base,
     boxShadow: 'none',
-    // border: `1px solid ${Colors.mainBlack}`,
+    // border: `1px solid ${({ theme }) => theme.colors.mainBlack}`,
     cursor: 'pointer',
     borderRadius: '0rem',
     backgroundColor: Colors.secondaryWhite,
     margin: '1.3rem 0',
     '&:hover': {
-      border: `1px solid ${Colors.mainBlack}`,
+      border: `1px solid ${({ theme }) => theme.colors.mainBlack}`,
     },
   }),
   option: (base, state) => ({
